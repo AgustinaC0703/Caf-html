@@ -1,0 +1,118 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device=width, initial scale=1.0"/>
+<title> Cafe 2D</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Great+Vibes&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="Untitled-2.css">
+
+</head>
+<body>
+	<header>
+		<div class="header-container"> 
+		<div class= "icon-text" id= "iconText">
+		<img src="WhatsApp_Image_2024-10-02_at_19.38.04-removebg-preview.png" alt="Ícono" class="icon"> 
+			<span class="text">Café 2D</span>
+		</div>
+				 <nav id="sidebar" class="sidebar">
+  <ul>
+    <li><a href="Menú.html" class= "sidebarmenu">menú</a></li>
+	<li><a href="Ubicación y horarios.html">ubicación y horarios</a></li>
+    <li><a href="Acerca de Nostros.html">Acerca de nosotros</a></li>
+         
+  </ul>
+</nav>
+			<i class="fa fa-bars" aria-hidden="true" id="menu-icon"></i>
+			 </div>
+		
+	</header>
+	
+	 <div class="container">
+<img src= "1727904015221.jpg"  alt="Imagen" class="full-width-image">
+
+		
+	     </div>
+	
+	
+		 <h2 class= "productos" > PRODUCTOS DESTACADOS </h2>
+		 <div class="image-container">
+			 <div class= "slides">
+        <img src="WhatsApp Image 2024-09-10 at 20.17.28 (2).jpeg" alt="Imagen 1" class="image">
+        <img src="WhatsApp Image 2024-09-10 at 20.14.39.jpeg" alt="Imagen 2" class="image">
+        <img src="WhatsApp Image 2024-09-10 at 20.17.28.jpeg" alt="Imagen 3" class="image">
+			 <img src="descarga.jpeg" alt= "Imagen 4" class= "image">
+				 </div>
+                <a class="prev" onclick="prevSlide(-1)">&#10094;</a>
+                <a class="next" onclick="nextSlide(1)">&#10095;</a> 
+    </div>
+		
+		 <div class= "sobrenosotros">
+			 <picture>
+  <source media="(min-width: 768px)" srcset="imagen-grande.jpg"> 
+  <source media="(min-width: 480px)" srcset="imagen-mediana.jpg"> 
+<img class= "imagencity" src= "3c69ebb5-0052-4db6-936f-d90393adbf92.jpeg" alt= "sobrenosotros" > 
+</picture>
+
+		
+	</div>
+	<footer>
+			<div class="contact-info">
+        <h2>Información de contacto</h2>
+        
+        <p>
+            <a href="tel:+5493875457553"> Teléfono: 3875457553</a></p>
+        <p>
+            <a href="https://instagram.com/cafe2D" target="_blank">Instagram: @cafe2Dbelgrano</a></p>
+    </div>
+		</footer>
+	
+	<script>
+	document.getElementById( 'menu-icon').onclick = function() {
+		var sidebar=document.getElementById ('sidebar'); 
+		sidebar.classList.toggle('show');
+	};
+		
+		document.getElementById('iconText').onclick = function(){
+			window.location.href = "Café 2D.html"
+		};
+	</script>
+	
+	<script>
+
+let slideIndex = 0;
+
+function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.image').length;
+
+    if (index >= totalSlides) {
+        slideIndex = 0;
+    } else if (index < 0) {
+        slideIndex = totalSlides - 1;
+    } else {
+        slideIndex = index;
+    }
+
+    slides.style.transform = `translateX(${-slideIndex * 100}%)`;
+}
+
+function moveSlide(step) {
+    showSlide(slideIndex + step);
+}
+
+
+showSlide(slideIndex);
+
+   
+	</script>
+	
+</body>
+</html>
